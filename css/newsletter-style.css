@@ -1,0 +1,88 @@
+/* General Styles */
+/* Newsletter Container */
+.newsletter-container {
+    background-color: var(--background-color);
+    border-radius: 24px;
+    padding: 3rem;
+}
+
+/* Contents Container */
+.contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2px;
+}
+
+/* Button Styles */
+.btn-container .btn {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 12px;
+    padding: 8px 16px;
+    margin-top: 2rem;
+}
+
+.btn-container .btn:hover {
+    text-decoration: underline;
+}
+
+.btn-container .btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(232, 214, 20, 0.2);
+}
+
+.btn-container .btn:active {
+    background-color: var(--accent-color);
+}
+
+/* Link Styles */
+.btn-container a {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-container a:hover {
+    color: var(--accent-color);
+}
+
+/* Text Container */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    padding: 0 3rem; /* Consolidated padding-left and padding-right */
+}
+
+/* Form Group Styles */
+.form-group {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensures the group spans the full width of the container */
+    margin-top: 1rem;
+}
+
+/* Input Styles */
+input {
+    width: 100%; /* Makes the input responsive within its container */
+    max-width: 320px; /* Keeps the input width consistent and not too large */
+    border-radius: 12px;
+    padding: 8px 16px;
+    border: 0;
+    margin-top: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}

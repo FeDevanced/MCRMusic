@@ -1,0 +1,247 @@
+html, body {
+    background-color: var(--background-color);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.row {
+    --bs-gutter-x: 0rem;
+}
+
+.hero-text {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.hero-subpage {
+    padding: 6rem 48px 48px 48px;
+}
+
+.article {
+    max-width: 768px;
+    text-align: left;
+    padding-top: 16px;
+    margin: auto;
+}
+
+.article-title {
+    align-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    margin-top: 4rem;
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    margin: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.article-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+.article .h2 {
+    margin-bottom: 16px;
+}
+
+.article .h5 {
+    margin-bottom: 8px;
+}
+
+.embed-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.embed-container .maps-embed {
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.maps-embed {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.embed-container .article-image {
+    width: 50%;
+}
+
+.button-container .btn {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 12px;
+    padding: 8px 16px;
+    margin-bottom: 2rem;
+}
+
+.button-container .btn:hover {
+    text-decoration: underline;
+}
+
+.button-container .btn:active {
+    background-color: var(--accent-color);
+}
+
+.sitemap {
+    padding-top: 6rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+}
+
+.sitemap .h2 {
+    margin-bottom: 16px;
+}
+
+.sitemap ul {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sitemap a {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.sitemap a:hover {
+    color: var(--accent-color);
+}
+
+.top-banner {
+    padding-top: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.list {
+    /* ... */
+
+    /* Hide scrollbar in Firefox */
+    scrollbar-width: none;
+
+    /* Hide scrollbar in IE and Edge */
+    -ms-overflow-style: none;
+}
+
+/* Hide scrollbar in webkit */
+.list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .h2 {
+        font-size: 28px;
+    }
+
+    .p {
+        font-size: 16px;
+    }
+
+    .hero-text {
+        margin: 0;
+    }
+
+    .hero-text {
+        margin-top: 24px;
+    }
+
+    .article-title {
+        margin: 0;
+        padding: 0;
+    }
+
+    .article-title .h3 {
+        font-size: 20px;
+    }
+
+    .article {
+        margin: 16px;
+    }
+
+    .article-image,
+    .article-image {
+        border-radius: 12px;
+    }
+
+    .embed-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .embed-container .maps-embed {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .maps-embed {
+        margin-bottom: 16px;
+    }
+
+    .embed-container .article-image {
+        width: 100%;
+    }
+
+    .sitemap {
+        margin-left: 16px;
+    }
+    .list{
+        animation: scroll 1 0s linear infinite alternate;
+    }
+}
+
+.list {
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    list-style: none;
+    width: 100%;
+    height: 40vh; /* Set the height of the entire carousel */
+    animation: scroll 90s linear infinite alternate; /* Alternate direction */
+}
+
+.item {
+    flex-shrink: 0;
+    height: 100%; /* Match the height of the .list */
+    background-color: #171717;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Take the full height of the item */
+}
+
+.content img {
+    width: auto; /* Let the width adjust automatically */
+    height: 100%; /* Match the container height (40vh) */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    border-radius: 12px;
+}
+
+/* Keyframes for smooth continuous scrolling forward and then backward */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%); /* Move through the entire list */
+    }
+}
