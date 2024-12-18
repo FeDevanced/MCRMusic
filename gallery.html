@@ -1,10 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+
+    <!--Custom Styling -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Music of Manchester</title>
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon.png">
 </head>
-<body>
+
+<body onload="document.body.style.opacity='1'">
+
+<nav class="navbar">
+    <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="Assets/hamburger.svg" alt="A hamburger menu icon" width="32px" height="32px">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="1970s.html">1970s</a></li>
+            <li><a class="dropdown-item" href="1980s.html">1980s</a></li>
+            <li><a class="dropdown-item" href="1990s-00s.html">1990s-00s</a></li>
+            <li><a class="dropdown-item" href="2010s-20s.html">2010s-20s</a></li>
+        </ul>
+    </div>
+    <a class="navbar-brand" href="#">Music of Manchester</a>
+</nav>
+
+
+
+<hr>
+<div class="footer">
+    <div class="footer-contact">
+        <p class="h5">Made by Josh</p>
+        <div class="contact-links">
+            <a class="small-link" href="https://www.instagram.com/josmad23/">Instagram</a>
+            <a class="small-link" href="https://github.com/FeDevanced">Github</a>
+        </div>
+    </div>
+    <div class="footer-links">
+        <a class="small-link" href="sitemap.html">Site Map</a>
+        <a class="small-link" href="#">Copyright Info</a>
+    </div>
+</div>
+
+<script src="js/sticky-navbar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

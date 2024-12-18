@@ -1,147 +1,287 @@
 /* ===== Global CSS ===== */
 *{
-    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+    scroll-behavior: smooth;
 }
 body{
     background-color: var(--background-color);
-    opacity: 0; /* Ensures content fades in on page load */
+    opacity: 0;
     transition: opacity 1s;
-    -webkit-transition: opacity 1s; /* Safari compatibility */
+    -webkit-transition: opacity 1s; /* Safari */
 }
 
 
 /* ===== IBM Plex ===== */
-/* Utility classes for font styling with IBM Plex families */
+.ibm-plex-serif-medium {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.ibm-plex-serif-semibold {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.ibm-plex-sans-regular {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.ibm-plex-sans-medium {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.ibm-plex-sans-semibold {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
 
 /* ===== Text Sizes & Colours ===== */
+.h1{ /* Main Titles */
+    font-size: 72px;
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
+    color: var(--accent-color);
+    filter: drop-shadow(5px 5px 10px #000000);
+}
+.h2{ /* Secondary Titles */
+    font-size: 40px;
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
+    color: var(--accent-color);
+    filter: drop-shadow(5px 5px 10px #000000);
+}
+.h3{ /* Main Headings */
+    font-size: 33px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+    filter: drop-shadow(5px 5px 10px #000000);
+}
+.h4{ /* Secondary Headings */
+    font-size: 28px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.h5{ /* Body Headings */
+    font-size: 18px;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.h6{ /* Secondary Headings */
+    font-size: 20px;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--text-color);
+}
+.p{ /* Body */
+    font-size: 18px;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--text-color);
+}
 :root {
     --background-color: #171717;
     --text-color: #fff;
     --accent-color: #D4C02B;
 }
 
-.h1{
-    font-size: 72px;
-    filter: drop-shadow(5px 5px 10px #000000); /* Adds subtle shadow for emphasis */
-}
-.h2, .h3{
-    filter: drop-shadow(5px 5px 10px #000000); /* Shared drop shadow */
-}
-
-.p{
-    font-size: 18px; /* General body text */
-}
-
 
 /* ===== Navbar ===== */
 .navbar{
-    width: fit-content; /* Content determines width */
-    position: absolute; /* Navbar is fixed relative to the page */
+    width: fit-content; /* Sets width, only as big as the content inside it */
+    margin: 16px;
+    background-color: var(--background-color);
+    padding: 16px;
+    border-radius: 12px;
+    position: absolute; /* Locks it to the top of the screen*/
+}
+.navbar a{
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+.dropdown-menu{
+    background-color: var(--background-color);
     border-radius: 12px;
 }
+.dropdown-menu li a{
+    color: var(--text-color);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* Yellow scrolling navbar */
 .sticky {
     position: fixed;
     top: 0;
-    z-index: 1000; /* Ensures navbar is always on top */
+    width: fit-content;
+    z-index: 1000; /* Ensures it stays on top of other elements */
     transition: ease-in 0.3s;
+    background-color: var(--accent-color);
+}
+.sticky a{
+    color: black;
 }
 .sticky img{
-    filter: invert(); /* Inverts image colors for visibility on yellow */
+    filter: invert();
 }
 
 
 /* ===== Hero Section ===== */
 .hero-section{
-    height: 100vh; /* Takes up full viewport height */
+    width: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 36px;
 }
 .hero-section img{
-    position: absolute; /* Ensures image stays as background */
-    object-fit: cover; /* Maintains aspect ratio while filling container */
-    z-index: -999; /* Pushes image behind all other content */
-}
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -999;
+} /* Background Image positioning stuff */
 .hero-section .h5{
     position: absolute;
     bottom: 16px;
-    opacity: 50%; /* Fades out text slightly */
+    opacity: 50%;
+} /* Positioning for 'scroll down to read' text */
+
+
+/* ===== Banner ===== */
+.banner{
+    padding: 32px;
 }
 
 
 /* ===== Card Overlay Styles ===== */
+#card-container{
+    background-color: var(--background-color);
+}
 .overlay {
     position: absolute;
-    inset: 0; /* Covers parent element completely */
-    background-color: #00000050; /* Semi-transparent black overlay */
+    inset: 0;
+    background-color: #00000050;
+    opacity: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 32px;
 }
 .overlay .btn, .links-container .btn, form .btn{
-    border-radius: 12px; /* Rounded button corners */
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 12px;
+    padding: 8px 16px;
+    margin-top: 1rem;
 }
-.overlay .btn:hover{
-    text-decoration: underline; /* Adds underline on hover */
+.overlay .btn:hover, .links-container .btn:hover{
+    text-decoration: underline;
 }
 .btn:focus{
-    box-shadow: 0 0 0 .25rem rgb(232, 214, 20, 0.2); /* Adds a subtle focus ring */
+    box-shadow: 0 0 0 .25rem rgb(232, 214, 20, 0.2);
+}
+.overlay .btn:active{
+    background-color: var(--accent-color);
 }
 
 
 /* ===== Footer ===== */
+hr{
+    color: white;
+    margin-top: 3rem;
+}
 .footer{
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
-    justify-content: space-between; /* Ensures items spread across footer */
+    flex-direction: row;
+    justify-content: space-between;
     padding: 2rem;
 }
 .footer a{
-    transition: color 0.3s ease; /* Smooth color change on hover */
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 .footer a:hover{
     color: var(--accent-color);
 }
+.footer-links{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contact-links{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
 .footer .contact-links{
-    gap: 16px; /* Consistent spacing between contact links */
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
 }
 
 .links-container{
-    gap: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     display: flex;
     flex-direction: row;
+    gap: 2rem;
 }
+
 .landing-link{
-    width: 25%; /* Sets width of landing links to 25% of container */
+    width: 25%;
 }
 
-
-/* ===== Small Screen Optimisations ===== */
+/* Small Screen Optimisations */
 @media (max-width: 768px) {
     .h1{
-        font-size: 48px; /* Scales down main titles for smaller screens */
+        font-size: 48px;
     }
     .h6{
-        font-size: 16px; /* Adjusts font size for small devices */
+        font-size: 16px;
     }
     .overlay, .hero-section{
-        padding: 16px; /* Reduces padding for smaller screens */
+        padding: 16px;
+    }
+    .overlay .btn{
+        margin-top: 0;
+        font-size: 14px;
     }
     .banner{
-        padding: 24px 16px 0 16px; /* Adjusts banner padding */
+        padding: 24px 16px 0 16px;
     }
     .footer{
-        padding: 16px; /* Smaller footer padding */
+        padding: 16px;
     }
     .footer .contact-links{
-        flex-direction: column; /* Stacks links vertically on small screens */
+        display: flex;
+        flex-direction: column;
         gap: 8px;
     }
     .links-container{
+        padding-left: 16px;
+        padding-right: 16px;
+        display: flex;
         flex-direction: column;
         gap: 16px;
     }
     .landing-link{
-        width: 100%; /* Makes links take full width on smaller screens */
+        width: 100%;
     }
 }
+
