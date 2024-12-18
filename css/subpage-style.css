@@ -141,6 +141,42 @@ html, body {
     display: none;
 }
 
+.gallery-caption {
+    margin-top: 8px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+.card-body{
+    background: var(--background-color);
+    padding-left: 0px;
+}
+
+.container .row{
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.container{
+    max-width: 100%;
+    padding: 24px;
+}
+
+.card{
+    border-radius: 12px;
+    border-width: 0px;
+}
+
+.col{
+    margin-top: 0;
+}
+
+.row{
+    padding-top: 0;
+}
+
+
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .h2 {
