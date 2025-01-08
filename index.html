@@ -15,16 +15,19 @@
     <!--Custom Styling -->
    <link rel="stylesheet" href="css/style.css">
     <title>Music of Manchester</title>
-    <link rel="icon" type="image/x-icon" href="/Assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 </head>
 
 <body onload="document.body.style.opacity='1'">
 
+<!--Navigation-->
 <nav class="navbar">
     <div class="dropdown">
+        <!--Hamburger menu icon-->
         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="Assets/hamburger.svg" alt="A hamburger menu icon" width="32px" height="32px">
+            <img src="assets/hamburger.svg" alt="A hamburger menu icon" width="32px" height="32px">
         </button>
+        <!--Dropdown List-->
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" href="1970s.html">1970s</a></li>
             <li><a class="dropdown-item" href="1980s.html">1980s</a></li>
@@ -35,38 +38,41 @@
             <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
         </ul>
     </div>
+    <!--Text Logo-->
     <a class="navbar-brand" href="index.html">Music of Manchester</a>
 </nav>
 
 <div class="hero-section">
-    <img class="background-image" src="Assets/IndexHero.jpg" alt="A blurred black and white image of a quartet band performing in a daylight-lit warehouse">
+    <img class="background-image" src="assets/index-background.jpg" alt="A blurred black and white image of a quartet band performing in a daylight-lit warehouse">
     <p class="h1">The Music of Manchester</p>
     <p class="h3">A timeline of popular bands over the decades</p>
     <p class="h5">Scroll down to read</p>
 </div>
 
-<div class="banner">
-    <p class="h2">Artists</p>
-    <p class="h4">Explore 60 years of iconic bands</p>
+<div class="banner"> <!--Full width banner, used to divide page sections-->
+    <p class="h2">Artists</p> <!-- Section Title -->
+    <p class="h4">Explore 60 years of iconic bands</p> <!-- Description -->
 </div>
 
+<!--Cards -->
+<!--### All cards have the same content, just different text/images ###-->
 <div class="container-fluid p-4" id="card-container">
 
-    <div class="row">
-        <div class="col-12 col-lg-6 m-0 p-2 position-relative hover-overlay">
-            <img src="Assets/Card1.jpg" alt="An image of the band Joy Division stood outside underneath a motorway bridge" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
-            <div class="overlay">
+    <div class="row"> <!-- 1x2 Card row -->
+        <div class="col-12 col-lg-6 m-0 p-2 position-relative hover-overlay"> <!--Card 1-->
+            <img src="assets/index-card-1.jpg" alt="An image of the band Joy Division stood outside underneath a motorway bridge" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;"> <!-- Background Image -->
+            <div class="overlay"> <!--Text & Button Overlay -->
                 <div class="overlay-text">
-                    <p class="h2">1970s</p>
-                    <p class="h6">The raw power and moody echoes of punk and post-punk take root.</p>
+                    <p class="h2">1970s</p> <!-- Card Title -->
+                    <p class="h6">The raw power and moody echoes of punk and post-punk take root.</p> <!-- Description -->
                 </div>
                 <a href="1970s.html">
-                    <button type="button" class="btn">Read More</button>
+                    <button type="button" class="btn">Read More</button> <!-- Link Button -->
                 </a>
             </div>
         </div>
         <div class="col-12 col-lg-6 m-0 p-2 position-relative hover-overlay">
-            <img src="Assets/Card2.jpg" alt="A closeup portrait of the band The Smiths with a plain gray background" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/index-card-2.jpg" alt="A closeup portrait of the band The Smiths with a plain gray background" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
 
             <div class="overlay">
                 <div class="overlay-text">
@@ -82,7 +88,7 @@
 
     <div class="row">
         <div class="col-12 col-lg-6 m-0 g-3 p-2 position-relative hover-overlay">
-            <img src="Assets/Card3.jpg" alt="An image of the band Oasis stood outside in a car park" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/index-card-3.jpg" alt="An image of the band Oasis stood outside in a car park" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
             <div class="overlay">
                 <div class="overlay-text">
                     <p class="h2">1990s-00s</p>
@@ -94,7 +100,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6 m-0 p-2 g-3 position-relative hover-overlay">
-            <img src="Assets/Card4.jpg" alt="A closeup image of the band Pale Waves with a navy blue background" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/index-card-4.jpg" alt="A closeup image of the band Pale Waves with a navy blue background" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
             <div class="overlay">
                 <div class="overlay-text">
                     <p class="h2">2010s-20s</p>
@@ -117,7 +123,7 @@
 
     <div class="row">
         <div class="col-12 col-lg-6 m-0 p-2 position-relative hover-overlay">
-            <img src="Assets/Card5.jpg" alt="An image of the band Joy Division stood outside underneath a motorway bridge" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/index-card-5.jpg" alt="An image of the band Joy Division stood outside underneath a motorway bridge" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
             <div class="overlay">
                 <div class="overlay-text">
                     <p class="h2">The Ritz</p>
@@ -129,7 +135,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6 m-0 p-2 position-relative hover-overlay">
-            <img src="Assets/Card6.jpg" alt="A closeup portrait of the band The Smiths with a plain gray background" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/index-card-6.jpg" alt="A closeup portrait of the band The Smiths with a plain gray background" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
 
             <div class="overlay">
                 <div class="overlay-text">
@@ -149,7 +155,7 @@
     <p class="h4">View the Gallery & Subscribe to our Newsletter.</p>
 </div>
 
-<div class="links-container">
+<div class="links-container"> <!-- Container for links without background images -->
     <div class="landing-link">
         <p class="h2">Gallery</p>
         <a href="gallery.html">
@@ -164,22 +170,24 @@
     </div>
 </div>
 
-<hr>
+<hr> <!-- Dividing Line -->
 <div class="footer">
     <div class="footer-contact">
         <p class="h5">Made by Josh</p>
-        <div class="contact-links">
+        <div class="contact-links"> <!-- External Links -->
             <a class="small-link" href="https://www.instagram.com/josmad23/">Instagram</a>
             <a class="small-link" href="https://github.com/FeDevanced">Github</a>
         </div>
     </div>
-    <div class="footer-links">
+    <div class="footer-links"> <!-- Internal Link -->
         <a class="small-link" href="sitemap.html">Site Map</a>
         <div class="h5">All copyright goes to original holders</div>
     </div>
 </div>
+
 <script src="js/sticky-navbar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

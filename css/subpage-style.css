@@ -1,37 +1,38 @@
+/* ===== Global Styles ===== */
 html, body {
     background-color: var(--background-color);
     max-width: 100%;
     overflow-x: hidden;
 }
-
 .row {
     --bs-gutter-x: 0rem;
 }
 
+
+/* ===== Hero Section ===== */
 .hero-text {
     margin-right: 3rem;
     margin-left: 3rem;
 }
-
 .hero-subpage {
     padding: 6rem 48px 48px 48px;
-    margin-top: 96px ;
+    margin-top: 96px;
 }
 
+
+/* ===== Article Styling ===== */
 .article {
     max-width: 768px;
     text-align: left;
     padding-top: 16px;
     margin: auto;
 }
-
 .article-title {
     align-content: center;
     align-items: center;
     background-color: var(--background-color);
     margin-top: 4rem;
 }
-
 .article-image {
     width: 100%;
     height: 100%;
@@ -40,45 +41,43 @@ html, body {
     object-fit: cover;
     border-radius: 12px;
 }
-
 .article-image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     background-color: var(--background-color);
 }
-
 .article .h2 {
     margin-bottom: 16px;
 }
-
 .article .h5 {
     margin-bottom: 8px;
 }
 
+
+/* ===== Embedded Containers ===== */
 .embed-container {
     display: flex;
     flex-direction: row;
     gap: 3rem;
     margin-bottom: 2rem;
 }
-
 .embed-container .maps-embed {
     width: 50%;
     height: auto;
     border-radius: 12px;
 }
-
 .maps-embed {
     width: 100%;
     border-radius: 12px;
     margin-bottom: 2rem;
 }
-
 .embed-container .article-image {
     width: 50%;
 }
 
+
+/* ===== Buttons ===== */
 .button-container .btn {
     background-color: var(--text-color);
     color: var(--background-color);
@@ -86,163 +85,116 @@ html, body {
     padding: 8px 16px;
     margin-bottom: 2rem;
 }
-
 .button-container .btn:hover {
     text-decoration: underline;
 }
-
 .button-container .btn:active {
     background-color: var(--accent-color);
 }
 
-.sitemap {
-    padding-top: 6rem;
-    margin-left: 3rem;
-    margin-bottom: 3rem;
-}
 
-.sitemap .h2 {
-    margin-bottom: 16px;
-}
-
-.sitemap ul {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.sitemap a {
-    color: var(--text-color);
-    transition: color 0.3s ease;
-}
-
-.sitemap a:hover {
-    color: var(--accent-color);
-}
-
+/* ===== Top Banner ===== */
 .top-banner {
     padding-top: 6rem;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
-.list {
-    /* ... */
 
+/* ===== List Styles ===== */
+.list {
     /* Hide scrollbar in Firefox */
     scrollbar-width: none;
 
     /* Hide scrollbar in IE and Edge */
     -ms-overflow-style: none;
 }
-
 /* Hide scrollbar in webkit */
 .list::-webkit-scrollbar {
     display: none;
 }
 
-.gallery-caption {
-    margin-top: 8px;
-    text-align: left;
-    color: var(--text-color);
-}
 
-.card-body{
+/* ===== Card Styles ===== */
+.card-body {
     background: var(--background-color);
     padding-left: 0px;
 }
-
-.container .row{
+.container .row {
     gap: 24px;
     margin-top: 16px;
 }
-
-.container{
+.container {
     max-width: 100%;
     padding: 24px;
 }
-
-.card{
+.card {
     border-radius: 12px;
     border-width: 0px;
 }
-
-.col{
+.col {
     margin-top: 0;
 }
-
-.row{
+.row {
     padding-top: 0;
 }
 
 
-
-/* Mobile Styles */
-@media (max-width: 768px) {
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) { /* Small screen optimisation for subpages. Repositions some divs and changes font sizes and padding */
     .h2 {
         font-size: 28px;
     }
-
     .p {
         font-size: 16px;
     }
-
     .hero-text {
         margin: 0;
     }
-
     .hero-text {
         margin-top: 24px;
     }
-
     .article-title {
         margin: 0;
         padding: 0;
     }
-
     .article-title .h3 {
         font-size: 20px;
     }
-
     .article {
         margin: 16px;
     }
-
     .article-image,
     .article-image {
         border-radius: 12px;
     }
-
     .embed-container {
         display: flex;
         flex-direction: column;
         gap: 16px;
         margin-bottom: 16px;
     }
-
     .embed-container .maps-embed {
         width: 100%;
         height: auto;
         border-radius: 12px;
     }
-
     .maps-embed {
         margin-bottom: 16px;
     }
-
     .embed-container .article-image {
         width: 100%;
     }
-
     .sitemap {
         margin-left: 16px;
     }
-    .list{
+    .list {
         animation: scroll 1 0s linear infinite alternate;
     }
 }
 
+
+/* ===== Venue page animation ===== */
 .list {
     display: flex;
     gap: 8px;
@@ -252,33 +204,61 @@ html, body {
     height: 40vh; /* Set the height of the entire carousel */
     animation: scroll 90s linear infinite alternate; /* Alternate direction */
 }
-
 .item {
     flex-shrink: 0;
     height: 100%; /* Match the height of the .list */
     background-color: #171717;
 }
-
 .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Take the full height of the item */
+    height: 100%; /* fills the container */
 }
-
 .content img {
-    width: auto; /* Let the width adjust automatically */
-    height: 100%; /* Match the container height (40vh) */
-    object-fit: cover; /* Ensure the image fills the container without distortion */
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Fills container without distorting */
     border-radius: 12px;
 }
 
-/* Keyframes for smooth continuous scrolling forward and then backward */
+/* ===== Sitemap Styling ===== */
+.sitemap {
+    padding-top: 6rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+}
+.sitemap .h2 {
+    margin-bottom: 16px;
+}
+.sitemap ul {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.sitemap a {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+.sitemap a:hover {
+    color: var(--accent-color);
+}
+
+
+/* ===== Gallery Styling ===== */
+.gallery-caption {
+    margin-top: 8px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+/* ===== Venue page carousel ===== */
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-200%); /* Move through the entire list */
+        transform: translateX(-200%);
     }
 }

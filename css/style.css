@@ -82,6 +82,8 @@ body{
     font-family: "IBM Plex Sans", sans-serif;
     color: var(--text-color);
 }
+
+/* ===== Colour variables ===== */
 :root {
     --background-color: #171717;
     --text-color: #fff;
@@ -98,21 +100,21 @@ body{
     border-radius: 12px;
     position: absolute; /* Locks it to the top of the screen*/
 }
-.navbar a{
+.navbar a{ /* Text logo styling */
     font-family: "IBM Plex Serif", serif;
     font-weight: 500;
     color: var(--accent-color);
 }
-.dropdown-menu{
+.dropdown-menu{ /* Dropdown styling */
     background-color: var(--background-color);
     border-radius: 12px;
 }
-.dropdown-menu li a{
+.dropdown-menu li a{ /* Dropdown text styling */
     color: var(--text-color);
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 400;
 }
-.dropdown-toggle::after {
+.dropdown-toggle::after { /* Removes down arrow for dropdown indicator */
     display: none;
 }
 
@@ -121,7 +123,7 @@ body{
     position: fixed;
     top: 0;
     width: fit-content;
-    z-index: 1000; /* Ensures it stays on top of other elements */
+    z-index: 1000; /*  Makes sure it stays on top of other elements */
     transition: ease-in 0.3s;
     background-color: var(--accent-color);
 }
@@ -129,7 +131,7 @@ body{
     color: black;
 }
 .sticky img{
-    filter: invert();
+    filter: invert(); /* inverts hamburger menu for better contrast on yellow background */
 }
 
 
@@ -150,7 +152,7 @@ body{
     height: 100%;
     object-fit: cover;
     z-index: -999;
-} /* Background Image positioning stuff */
+} /* Background Image positioning to take up full screen */
 .hero-section .h5{
     position: absolute;
     bottom: 16px;
@@ -164,7 +166,7 @@ body{
 }
 
 
-/* ===== Card Overlay Styles ===== */
+/* ===== Card Overlay Styling ===== */
 #card-container{
     background-color: var(--background-color);
 }
@@ -234,7 +236,6 @@ hr{
     flex-direction: row;
     gap: 16px;
 }
-
 .links-container{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -242,13 +243,12 @@ hr{
     flex-direction: row;
     gap: 2rem;
 }
-
 .landing-link{
     width: 25%;
 }
 
 /* Small Screen Optimisations */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Makes larger text smaller and reduces padding to fit better on smaller screens */
     .h1{
         font-size: 48px;
     }
